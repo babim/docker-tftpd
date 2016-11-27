@@ -1,2 +1,5 @@
 # tftpd
-tftpd-hpa in an Alpine container
+thanks atomney
+
+# Run
+docker run -it --name tftpf -v /tftpdata:/data babim/tftpd
