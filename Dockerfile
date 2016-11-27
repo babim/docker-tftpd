@@ -1,6 +1,4 @@
-FROM alpine:latest
-
-MAINTAINER atomney <atomney+docker@gmail.com>
+FROM babim/alpinebase
 
 RUN apk add --no-cache tftp-hpa && \
     mkdir -p /data
