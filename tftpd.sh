@@ -19,7 +19,7 @@ CURRENTUSER=$(id -u `whoami`)
 ########## INSTALL
 if [ "$1" = "--install" ]; then
 
-        docker run -d -v $TFTPROOT:/data -p $TFTPPORT:69/udp --name $CONTAINERNAME babim/tftpd
+        docker run -d -v $TFTPROOT:/share -p $TFTPPORT:69/udp --name $CONTAINERNAME babim/tftpd
 fi
 
 
