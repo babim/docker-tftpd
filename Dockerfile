@@ -1,12 +1,12 @@
 FROM babim/alpinebase
 
 RUN apk add --no-cache tftp-hpa && \
-    mkdir -p /share
+    mkdir -p /data
 
 EXPOSE 69/udp
 
-VOLUME /share
+VOLUME /data
 
 ENTRYPOINT ["in.tftpd"]
 
-CMD ["-L", "--verbose", "-u", "root", "--secure", "--create", "/share"]
+CMD ["-L", "--verbose", "-u", "root", "--secure", "--create", "/data"]
